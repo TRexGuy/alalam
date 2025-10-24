@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer base {
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1300px !important;
+    }
+  }
+
+  @font-face {
+    font-family: "jakarta-medium";
+    src: url(../assets/font/PlusJakartaSans-Medium.ttf) format("truetype"),
+    url(../assets/font/PlusJakartaSans-Medium.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "jakarta-regular";
+    src: url(../assets/font/PlusJakartaSans-Regular.ttf) format("truetype"),
+    url(../assets/font/PlusJakartaSans-Regular.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "jakarta-bold";
+    src: url(../assets/font/PlusJakartaSans-Bold.ttf) format("truetype"),
+    url(../assets/font/PlusJakartaSans-Bold.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "jakarta-extrabold";
+    src: url(../assets/font/PlusJakartaSans-ExtraBold.ttf) format("truetype"),
+    url(../assets/font/PlusJakartaSans-ExtraBold.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "jakarta-semibold";
+    src: url(../assets/font/PlusJakartaSans-SemiBold.ttf) format("truetype"),
+    url(../assets/font/PlusJakartaSans-SemiBold.woff2) format("woff2");
+  }
+
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "regular-jakarta";
+}
+/* 
+.BoldJakarta {
+  font-family: "bold-jakarta" !important;
+} */

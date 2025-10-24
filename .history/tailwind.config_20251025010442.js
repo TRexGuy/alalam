@@ -1,0 +1,31 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // 🎨 رنگ‌های اضافه خودت
+        primary: "#0EA5E9",
+        secondary: "#9333EA",
+        brand: {
+          light: "#93C5FD",
+          DEFAULT: "#3B82F6",
+          dark: "#1E3A8A",
+        },
+      },
+      fontFamily: {
+        jakarta: ["'Plus Jakarta Sans'", "sans-serif"],
+      },
+      fontSize: {
+        // 🅰 سایزهای اضافه
+        "2xs": "0.7rem",
+        "3xl+": "2rem",
+      },
+    },
+  },
+  plugins: [],
+};
